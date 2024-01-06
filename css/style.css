@@ -47,7 +47,11 @@
 }
 .container .calculator .result h1 {
   text-align: end;
-  margin: 10px 5px 10px 0;
+  margin: 5px 5px 5px 0;
+}
+.container .calculator .result p {
+  margin: 5px 5px 0 0;
+  text-align: end;
 }
 .container .calculator .main {
   width: 95%;
@@ -57,8 +61,8 @@
   margin: 10px;
 }
 .container .calculator .main .button {
-  width: 75px;
-  height: 75px;
+  width: 70px;
+  height: 70px;
   background-color: #6497b1;
   border: none;
   border-radius: 50%;

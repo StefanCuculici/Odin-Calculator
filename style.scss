@@ -64,8 +64,15 @@ $main-color:#03396c;
                 h1 {
 
                     text-align: end;
-                    margin:10px 5px 10px 0;
+                    margin:5px 5px 5px 0;
                 
+                }
+
+                p {
+
+                    margin:5px 5px 0 0;
+                    text-align: end;
+
                 }
 
             }
@@ -80,8 +87,8 @@ $main-color:#03396c;
 
             .button {
 
-                width:75px;
-                height:75px;
+                width:70px;
+                height:70px;
                 background-color:$secondary-color;
                 border:none;
                 border-radius: 50%;
