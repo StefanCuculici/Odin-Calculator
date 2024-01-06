@@ -10,6 +10,12 @@ $main-color:#03396c;
 
 }
 
+body {
+
+    background-color: rgb(11, 14, 33);
+
+}
+
 .heading {
 
     width:90%;
@@ -21,10 +27,9 @@ $main-color:#03396c;
 .align {
 
     display:flex;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
-    gap:20px;
-
 
 }
 

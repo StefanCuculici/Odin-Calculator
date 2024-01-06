@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgb(11, 14, 33);
+}
+
 .heading {
   width: 90%;
   margin: auto;
@@ -12,9 +16,9 @@
 
 .align {
   display: flex;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
 }
 
 .container {
