@@ -51,7 +51,7 @@ body {
         flex-direction: column;
         // justify-content: center;
         border:5px solid darken($main-font-color, 5%);
-        box-shadow: 5px 5px 5px  $main-font-color;
+        box-shadow: 5px 5px 5px 5px darken($main-font-color, 5%);
         border-radius: 5px;
         align-items: center;
         color:darken($main-font-color, 5%);

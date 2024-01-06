@@ -5,13 +5,13 @@ let shouldResetScreen = false
 
 const numberButtons=document.querySelectorAll('[data-number]');
 const operantButtons=document.querySelectorAll('[data-operant]');
+const Buttons=document.querySelectorAll('button');
 const Clear=document.getElementById('clear');
 const Equal=document.getElementById('equal');
 const Delete=document.getElementById('delete');
 const Point=document.getElementById('point');
 const currentResult=document.getElementById('currentResult');
 const pastResult=document.getElementById('pastResult');
-
 
 Equal.addEventListener('click', evaluate)
 Clear.addEventListener('click', clear)
@@ -72,6 +72,13 @@ function deleteNumber() {
     currentResult.textContent = currentResult.textContent
       .toString()
       .slice(0, -1)
+
+    if(currentResult.textContent=='') {
+
+        currentResult.textContent='0';
+
+    }
+
   }
 
 function setOperation(operator) {
@@ -140,14 +147,6 @@ function power(a, b) {
     return Math.pow(a, b);
 
 }
-
-function convertOperator(keyboardOperator) {
-    if (keyboardOperator === '/') return '÷'
-    if (keyboardOperator === '*') return '×'
-    if (keyboardOperator === '-') return '−'
-    if (keyboardOperator === '+') return '+'
-  }
-
 
 function roundResult(number) {
     return Math.round(number * 1000) / 1000
