@@ -75,4 +75,6 @@ body {
 .container .calculator .main .button:hover {
   color: #6497b1;
   background-color: #03396c;
+  transform: scale(0.9);
+  transition: 200ms ease-in-out;
 }
