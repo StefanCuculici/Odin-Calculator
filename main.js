@@ -85,38 +85,41 @@ function setOperation(operator) {
     if (currentOperand !== null) {
         evaluate();
         firstOperand = currentResult.textContent;
-        currentOperand = operator;
-        pastResult.textContent = `${firstOperand} ${currentOperand}`;
-        shouldResetScreen = true;
-
-    } 
-    else {
-
-        currentOperand = operator;
+    } else {
         firstOperand = currentResult.textContent;
-        pastResult.textContent = `${firstOperand} ${currentOperand}`;
-        shouldResetScreen = true;
+        pastResult.textContent = `${firstOperand} ${operator}`;
     }
-}
 
+    currentOperand = operator;
+    currentResult.textContent='-'
+    shouldResetScreen = true;
+    secondOperand = '';
+}
 
 function evaluate() {
-
-    if(currentOperand===null || shouldResetScreen) 
+    if (currentOperand === null || shouldResetScreen) 
         return;
 
-    if(currentOperand==='/' &&currentResult.textContent==='0') {
-        alert('cant divide by 0');
+    if (currentOperand === '/' && secondOperand === '0') {
+        alert('Cannot divide by 0');
         clear();
-        return
+        return;
     }
 
-    secondOperand=currentResult.textContent;
-    currentResult.textContent=roundResult(operate(currentOperand, firstOperand, secondOperand));
+    if (secondOperand === '') {
+        // If secondOperand is empty, set it to the current result
+        secondOperand = currentResult.textContent;
+    }
 
+    currentResult.textContent = roundResult(operate(currentOperand, firstOperand, secondOperand));
     pastResult.textContent = `${firstOperand} ${currentOperand} ${secondOperand} =`;
 
+    firstOperand = '';
+    currentOperand = null;
+    shouldResetScreen = true;
+    secondOperand = '';
 }
+
 
 function add(a, b) {
     return a+b;
